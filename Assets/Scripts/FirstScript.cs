@@ -15,6 +15,6 @@ public class FirstScript : MonoBehaviour
         Vector2 newPos = transform.position;
         newPos.x += 0.1f;
         transform.position = newPos;
-        if (transform.position.x < 0 || transform.position.x > 8)
+       // if (transform.position.x < 0 || transform.position.x > 8)
     }
 }
