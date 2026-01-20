@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -5,30 +6,47 @@ public class SpriteChangr : MonoBehaviour
 {
     public SpriteRenderer spriteRenderer;
     public Color col;
+    public List<Sprite> barrels;
+    public int randomNumber;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       PickARandomColour();
+       //PickARandomColour();
+     //   PickARandomSprite();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (Keyboard.current.anyKey.wasPressedThisFrame)
-        // {
-        //    PickARandomColour();
-        // }
+        if (Keyboard.current.anyKey.wasPressedThisFrame == true)
+        {
+            Debug.Log("Try to change the spriteplease");
+            if (barrels.Count > 0);
+            {
+                PickARandomSprite();
+            }
+        }
         Vector2 mousPos = Camera.main.ScreenToWorldPoint(Mouse.current.position.ReadValue());
         if (spriteRenderer.bounds.Contains(mousPos) == true)
         {
             spriteRenderer.color = col;
         }
         else
-        { spriteRenderer.color = Color.white; }
+        {
+            spriteRenderer.color = Color.white;
+        }
+
+        if (Mouse.current.leftButton.wasPressedThisFrame == true) {
+            barrels.RemoveAt(0);
+                }
     }
     void PickARandomColour()
     {
-        
-        spriteRenderer.color = col;
+        spriteRenderer.color = Random.ColorHSV();
     }
-}
+    void PickARandomSprite()
+    {
+        randomNumber = Random.Range(0, barrels.Count);
+        spriteRenderer.sprite = barrels[randomNumber];
+    }
+    }
