@@ -31,13 +31,13 @@ public class SquareMover : MonoBehaviour
 
         if (newPosition.x > xMax)
         {
-            speed = speed * -1.5f;
+            speed = speed * -1f;
         }
         //also speed *= -1f;
         //also also speed = -speed;
         if (newPosition.x < xMin)
         {
-            speed = speed * -1.5f;
+            speed = speed * -1f;
         }
      
     }
