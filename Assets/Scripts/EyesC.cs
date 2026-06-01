@@ -21,13 +21,6 @@ public class EyesC : MonoBehaviour
         Vector3 worldMousePosition = gameCamera.ScreenToWorldPoint(currentMousePosition);
         worldMousePosition.z = 0f;
         transform.position = worldMousePosition;
-      if (transform.position.x > xMax)
-        {
-            transform.position.x == xMax;
-        }
-      //  if (transform.x < xMin)
-       // {
-         //   transform.position.x = xMin;
-        //}
+
     }
 }

@@ -129,6 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 396850076}
   - component: {fileID: 396850075}
+  - component: {fileID: 396850077}
   m_Layer: 0
   m_Name: Firetruck_0
   m_TagString: Untagged
@@ -204,12 +205,62 @@ Transform:
   m_GameObject: {fileID: 396850074}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.0581, y: 0.8395, z: 0}
+  m_LocalPosition: {x: 6.79, y: 0.8395, z: 0}
   m_LocalScale: {x: 0.25580528, y: 0.25580528, z: 0.25580528}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &396850077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396850074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c58c90c7d165d418d5dabd34d6a3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Truck
+  startValue: {x: -6.8, y: 0, z: 0}
+  endValue: {x: 6.8, y: 0, z: 0}
+  currentValue: {x: 0, y: 0, z: 0}
+  speed: 0.1
+  duration: 5
+  xPos:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -2.0266037
+      value: 2.2195435
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.43346694
+      value: 0.09818375
+      inSlope: -0.34129158
+      outSlope: -0.34129158
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1.3542633
+      value: 2.209591
+      inSlope: 2
+      outSlope: 2
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &767672326
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,7 +290,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f4fb6fd12719c140a072f194fb16eab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EyesC
-  eyesC: 0
+  gameCamera: {fileID: 1097626898}
 --- !u!4 &767672328
 Transform:
   m_ObjectHideFlags: 0
@@ -267,6 +318,7 @@ GameObject:
   m_Component:
   - component: {fileID: 867621798}
   - component: {fileID: 867621797}
+  - component: {fileID: 867621799}
   m_Layer: 0
   m_Name: Celeste Hair Right_0
   m_TagString: Untagged
@@ -348,6 +400,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &867621799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867621796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fa7b2eb2b603742a396215676e3fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hair
 --- !u!1 &902817791
 GameObject:
   m_ObjectHideFlags: 0
@@ -748,7 +812,7 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8627452, g: 0.8627452, b: 0.8627452, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -964,6 +1028,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1707806570}
   - component: {fileID: 1707806569}
+  - component: {fileID: 1707806571}
   m_Layer: 0
   m_Name: Celeste Hair Left_0
   m_TagString: Untagged
@@ -1045,6 +1110,18 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1707806571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1707806568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51fa7b2eb2b603742a396215676e3fa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Hair
 --- !u!1 &2128483164
 GameObject:
   m_ObjectHideFlags: 0
