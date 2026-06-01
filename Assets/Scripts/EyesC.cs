@@ -1,0 +1,33 @@
+using UnityEngine;
+using Unity.VisualScripting;
+using UnityEngine.InputSystem;
+public class EyesC : MonoBehaviour
+{
+    float xMin = -1.48f;
+    float xMax = -1.17f;
+
+    public Camera gameCamera;
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        Vector3 currentMousePosition = Mouse.current.position.ReadValue();
+
+        Vector3 worldMousePosition = gameCamera.ScreenToWorldPoint(currentMousePosition);
+        worldMousePosition.z = 0f;
+        transform.position = worldMousePosition;
+      if (transform.position.x > xMax)
+        {
+            transform.position.x == xMax;
+        }
+      //  if (transform.x < xMin)
+       // {
+         //   transform.position.x = xMin;
+        //}
+    }
+}
