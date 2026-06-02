@@ -2,16 +2,18 @@ using UnityEngine;
 
 public class Bear : MonoBehaviour
 {
-    public float speed = 5f;
+    public float xSpeed;
+    public float ySpeed;
+
     float xMax = 8.3f;
     float xMin = -8.3f;
     float yMax = 0f;
-    float yMin = -4.5f;
+    float yMin = -3.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        transform.position = (Vector2) transform.position + Random.insideUnitCircle * 2;
     }
 
     // Update is called once per frame
@@ -19,27 +21,25 @@ public class Bear : MonoBehaviour
     {
 
         Vector3 newPosition = transform.position;
-
-
-        newPosition.x += speed * Time.deltaTime;
-        newPosition.y += speed * Time.deltaTime;
+        newPosition.x += xSpeed * Time.deltaTime;
+        newPosition.y += ySpeed * Time.deltaTime;
         transform.position = newPosition;
 
-        if (newPosition.x > xMax)
+        if (newPosition.x >= xMax)
         {
-            speed = speed * -1f;
+            xSpeed = xSpeed * -1f;
         }
         if (newPosition.x < xMin)
         {
-            speed = speed * -1f;
+            xSpeed = xSpeed * -1f;
         }
         if (newPosition.y > yMax)
         {
-            speed = speed * -1f;
+            ySpeed = ySpeed * -1f;
         }
         if (newPosition.y < yMin)
         {
-            speed = speed * -1f;
+            ySpeed = ySpeed * -1f;
         }
 
     }
