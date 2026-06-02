@@ -1,22 +1,28 @@
 using UnityEngine;
 
-public class Moon : MonoBehaviour
+public class Bear : MonoBehaviour
 {
-    public float speed = 0.1f;
-    float xMax = 9.5f;
-    float xMin = -9.5f;
+    public float speed = 5f;
+    float xMax = 8.3f;
+    float xMin = -8.3f;
+    float yMax = 0f;
+    float yMin = -4.5f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
+
         Vector3 newPosition = transform.position;
+
+
         newPosition.x += speed * Time.deltaTime;
+        newPosition.y += speed * Time.deltaTime;
         transform.position = newPosition;
 
         if (newPosition.x > xMax)
@@ -27,5 +33,14 @@ public class Moon : MonoBehaviour
         {
             speed = speed * -1f;
         }
+        if (newPosition.y > yMax)
+        {
+            speed = speed * -1f;
+        }
+        if (newPosition.y < yMin)
+        {
+            speed = speed * -1f;
+        }
+
     }
 }

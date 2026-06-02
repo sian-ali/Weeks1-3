@@ -220,47 +220,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 396850074}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 87c58c90c7d165d418d5dabd34d6a3fc, type: 3}
+  m_Script: {fileID: 11500000, guid: 8cca1fc3f7cbc584fae9e98e348e484b, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Truck
-  startValue: {x: -6.8, y: 0, z: 0}
-  endValue: {x: 6.8, y: 0, z: 0}
-  currentValue: {x: 0, y: 0, z: 0}
-  speed: 0.1
-  duration: 5
-  xPos:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: -2.0266037
-      value: 2.2195435
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    - serializedVersion: 3
-      time: 0.43346694
-      value: 0.09818375
-      inSlope: -0.34129158
-      outSlope: -0.34129158
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1.3542633
-      value: 2.209591
-      inSlope: 2
-      outSlope: 2
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0
-      outWeight: 0
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
+  m_EditorClassIdentifier: Assembly-CSharp::Moon
+  speed: 5
 --- !u!1 &767672326
 GameObject:
   m_ObjectHideFlags: 0
@@ -513,7 +476,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1014596045}
   - component: {fileID: 1014596044}
-  - component: {fileID: 1014596043}
+  - component: {fileID: 1014596046}
   m_Layer: 0
   m_Name: Moon Placeholder
   m_TagString: Untagged
@@ -521,19 +484,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1014596043
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1014596042}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8cca1fc3f7cbc584fae9e98e348e484b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Moon
-  speed: 0.5
 --- !u!212 &1014596044
 SpriteRenderer:
   serializedVersion: 2
@@ -608,6 +558,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1014596046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1014596042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87c58c90c7d165d418d5dabd34d6a3fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Truck
+  startValue: {x: -9.5, y: 3, z: 0}
+  endValue: {x: 9.5, y: 2.5, z: 0}
+  currentValue: {x: 0, y: 0, z: 0}
+  duration: 20
 --- !u!1 &1097626896
 GameObject:
   m_ObjectHideFlags: 0
@@ -937,6 +903,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1594627303}
   - component: {fileID: 1594627302}
+  - component: {fileID: 1594627304}
   m_Layer: 0
   m_Name: Monokuma_0
   m_TagString: Untagged
@@ -1018,6 +985,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1594627304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1594627301}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a850a9614186cd240b28a7c11be1a163, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Bear
+  speed: 5
 --- !u!1 &1707806568
 GameObject:
   m_ObjectHideFlags: 0

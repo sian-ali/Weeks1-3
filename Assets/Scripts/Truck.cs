@@ -6,11 +6,10 @@ public class Truck : MonoBehaviour
     public Vector3 endValue;
 
     public Vector3 currentValue;
-    public float speed = 0.1f;
     public float duration;
 
     float progress = 0f;
-    public AnimationCurve xPos;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
