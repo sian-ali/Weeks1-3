@@ -18,7 +18,8 @@ public class Hair : MonoBehaviour
         Vector3 newPosition = transform.position;
         newPosition.x += speed * Time.deltaTime;
         transform.position = newPosition;
-
+        //makes the hair move left and right to look like there's wind
+        //bounces back and forth when it reaches its min and max x values
         if (newPosition.x > xMax)
         {
             speed = speed * -1f;

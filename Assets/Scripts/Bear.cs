@@ -13,6 +13,7 @@ public class Bear : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        //makes the bear spawn in a random location within the range of 2
         transform.position = (Vector2) transform.position + Random.insideUnitCircle * 2;
     }
 
@@ -24,7 +25,8 @@ public class Bear : MonoBehaviour
         newPosition.x += xSpeed * Time.deltaTime;
         newPosition.y += ySpeed * Time.deltaTime;
         transform.position = newPosition;
-
+        //when the bear reaches its min and max x value they only change direction on the x value
+        //so its more bouncy
         if (newPosition.x >= xMax)
         {
             xSpeed = xSpeed * -1f;
@@ -33,6 +35,7 @@ public class Bear : MonoBehaviour
         {
             xSpeed = xSpeed * -1f;
         }
+        //bear changes y direction when it reaches its min and max y values
         if (newPosition.y > yMax)
         {
             ySpeed = ySpeed * -1f;
